@@ -31,4 +31,9 @@ function onConnected(socket) {
   socket.on('feedback', (data) => {
     socket.broadcast.emit('feedback', data)
   })
+
+  socket.on('live-typing', (data) => {
+    socket.broadcast.emit('live-typing', data);
+  });
+  
 }
